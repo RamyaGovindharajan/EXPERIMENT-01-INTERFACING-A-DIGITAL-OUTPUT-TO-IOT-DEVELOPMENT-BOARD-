@@ -1,10 +1,7 @@
-###  DATE: 
+###  DATE: 23/09/2025
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
-
-
+###  NAME: Ramya G
+###  ROLL NO :212224220078
 
 # EXPERIMENT-01-INTERFACING-A-DIGITAL-OUTPUT-TO-IOT-DEVELOPMENT-BOARD
 
@@ -88,11 +85,35 @@ The main features of LPC2148 include the following.
 ## STM 32 CUBE PROGRAM :
 
 
+```
+#include "main.h"
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  while (1)
+  {
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+	  HAL_Delay(3000);
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+	  HAL_Delay(3000);
+  }
+}
+```
+
+
 
 
 
 ## OUTPUT  :
  
+  ![419323363-3f6ba13f-40d0-40d3-afdb-d0fe498cc5bc](https://github.com/user-attachments/assets/9febc7a7-3040-418d-b60b-c3caf8cb2de0)
+![419323401-8001bdee-61f2-4925-a896-07378fd2d000](https://github.com/user-attachments/assets/cf17e374-6e0e-499d-8768-544e19c40f00)
+
  
  
  
